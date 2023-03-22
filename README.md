@@ -4,9 +4,9 @@ Este proyecto consiste en programar una librería en C que contendrá varias de 
 
 ## Tabla de contenidos
 
-- [¿Qué es `Libft`?](#¿qué-es-libft)
-- [¿En qué consiste?](#¿en-qué-consiste)
-- [¿Qué es `Makefile` (y como hacerlo)?](#¿qué-es-makefile-y-cómo-hacerlo)
+- [¿Qué es `Libft`?](#qué-es-libft)
+- [¿En qué consiste?](#en-qué-consiste)
+- [¿Qué es `Makefile` (y como hacerlo)?](#qué-es-makefile-y-cómo-hacerlo)
 - [Listado de funciones](#lista-de-funciones)
 
  <hr>
@@ -19,8 +19,6 @@ Creamos así una librería propia, que será muy útil puesto que se podrá util
 Es interesante ir enriqueciendo la `Libft` a lo largo del _cursus_, siempre asegurándonos de que todas las funciones utilizadas son las permitidas en cada proyecto.
 
 Toda la información sobre Libft está detallada en el [pdf del enunciado](./documents/libft-v15-subject-es.pdf), dentro la carpeta `documents`.
-
-<br>
 
 ### ¿En qué consiste?
 
@@ -36,18 +34,12 @@ Toda la información sobre Libft está detallada en el [pdf del enunciado](./doc
    <br>
    Funciones interesantes para la manipulación de listas.
 
-<br>
-
-### ¿Qué es [Makefile]() (y cómo hacerlo)?
+### ¿Qué es [Makefile](./Makefile) (y cómo hacerlo)?
 
 Un fichero `Makefile` es un archivo de texto que describe las instrucciones que debe ejecutar el comando `make`, que lee el archivo y realiza las tareas necesarias para compilar y construir el programa de forma automatizada.
 El manual de la GNU recomienda escribirlo con mayúscula puesto que suele aparecer cerca de otros archivos descriptivos como README, y puede ser personalizado para adaptarse a las necesidades del proyecto, permitiendo que el desarrollador controle la compilación y construcción de software de una manera muy flexible. También permite la compilación parcial de archivos, de modo que sólo se compilan los archivos que han cambiado desde la última compilación, lo que acelera el proceso de construcción y ahorra tiempo de desarrollo.
 
-<br>
-
 ## Lista de funciones
-
-<br>
 
 |     Funciones de libc     | Funciones adicionales | Parte bonus |
 | :-----------------------: | :-------------------: | :---------: |
@@ -61,6 +53,8 @@ El manual de la GNU recomienda escribirlo con mayúscula puesto que suele aparec
 |                           |                       |             |
 |                           |                       |             |
 |                           |                       |             |
+
+<br>
 
 ## [ft_isalpha](./functions/ft_isalpha.c)
 
