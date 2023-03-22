@@ -49,15 +49,21 @@ El manual de la GNU recomienda escribirlo con mayúscula puesto que suele aparec
 
 <br>
 
-| Funciones de libc | Funciones adicionales | Parte bonus |
-| :---------------: | :-------------------: | :---------: |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
-|                   |                       |             |
+|     Funciones de libc     | Funciones adicionales | Parte bonus |
+| :-----------------------: | :-------------------: | :---------: |
+| [ft_isalpha](#ft_isalpha) |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+|                           |                       |             |
+
+## [ft_isalpha](./functions/ft_isalpha.c)
+
+|                 Descripción                 |       Parámetro       |                          Valor retornado                           |
+| :-----------------------------------------: | :-------------------: | :----------------------------------------------------------------: |
+| Comprueba si un caracter es alfabético o no | El caracter a testear | Devuelve 1 si es true (alfabético) o 0 si es false (no alfabético) |
