@@ -46,7 +46,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | De la librería `<ctype.h>`  |                       |             |
 | [`ft_isalpha`](#ft_isalpha) |                       |             |
 | [`ft_isdigit`](#ft_isdigit) |                       |             |
-|                             |                       |             |
+| [`ft_isalnum`](#ft_isalnum) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -58,14 +58,20 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 
 <br>
 
-## [ft_isalpha](./functions/ft_isalpha.c)
+### [ft_isalpha](./functions/ft_isalpha.c)
 
 |                 Descripción                 |                            Valor retornado                             |
 | :-----------------------------------------: | :--------------------------------------------------------------------: |
 | Comprueba si un carácter es alfabético o no | Devuelve 1 si es `true` (alfabético) o 0 si es `false` (no alfabético) |
 
-## [ft_isdigit](./functions/ft_isdigit.c)
+### [ft_isdigit](./functions/ft_isdigit.c)
 
 |              Descripción              |                   Valor retornado                    |
 | :-----------------------------------: | :--------------------------------------------------: |
 | Comprueba si un carácter es un dígito | Devuelve 1 si es `true` (numérico) o 0 si es `false` |
+
+### [ft_isalnum](./functions/ft_isalnum.c)
+
+|                                      Descripción                                      |                     Valor retornado                      |
+| :-----------------------------------------------------------------------------------: | :------------------------------------------------------: |
+| Comprueba si un carácter es alfanumérico (combinación de `ft_isalpha` y `ft_isdigit`) | Devuelve 1 si es `true` (alfanumérico) o 0 si es `false` |
