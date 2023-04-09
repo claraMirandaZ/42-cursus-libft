@@ -41,30 +41,31 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 
 ## Lista de funciones
 
-|     Funciones de libc     | Funciones adicionales | Parte bonus |
-| :-----------------------: | :-------------------: | :---------: |
-| [ft_isalpha](#ft_isalpha) |                       |             |
-| [ft_isdigit](#ft_isdigit) |                       |             |
-|                           |                       |             |
-|                           |                       |             |
-|                           |                       |             |
-|                           |                       |             |
-|                           |                       |             |
-|                           |                       |             |
-|                           |                       |             |
-|                           |                       |             |
-|                           |                       |             |
+|      Funciones de libc      | Funciones adicionales | Parte bonus |
+| :-------------------------: | :-------------------: | :---------: |
+| De la librería `<ctype.h>`  |                       |             |
+| [`ft_isalpha`](#ft_isalpha) |                       |             |
+| [`ft_isdigit`](#ft_isdigit) |                       |             |
+|                             |                       |             |
+|                             |                       |             |
+|                             |                       |             |
+|                             |                       |             |
+|                             |                       |             |
+|                             |                       |             |
+|                             |                       |             |
+|                             |                       |             |
+|                             |                       |             |
 
 <br>
 
 ## [ft_isalpha](./functions/ft_isalpha.c)
 
-|                 Descripción                 |       Parámetro       |                          Valor retornado                           |
-| :-----------------------------------------: | :-------------------: | :----------------------------------------------------------------: |
-| Comprueba si un carácter es alfabético o no | El carácter a testear | Devuelve 1 si es true (alfabético) o 0 si es false (no alfabético) |
+|                 Descripción                 |                            Valor retornado                             |
+| :-----------------------------------------: | :--------------------------------------------------------------------: |
+| Comprueba si un carácter es alfabético o no | Devuelve 1 si es `true` (alfabético) o 0 si es `false` (no alfabético) |
 
 ## [ft_isdigit](./functions/ft_isdigit.c)
 
-|              Descripción              |       Parámetro       |                 Valor retornado                  |
-| :-----------------------------------: | :-------------------: | :----------------------------------------------: |
-| Comprueba si un carácter es un dígito | El carácter a testear | Devuelve 1 si es true (numérico) o 0 si es false |
+|              Descripción              |                   Valor retornado                    |
+| :-----------------------------------: | :--------------------------------------------------: |
+| Comprueba si un carácter es un dígito | Devuelve 1 si es `true` (numérico) o 0 si es `false` |
