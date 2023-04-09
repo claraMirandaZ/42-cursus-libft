@@ -44,6 +44,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |     Funciones de libc     | Funciones adicionales | Parte bonus |
 | :-----------------------: | :-------------------: | :---------: |
 | [ft_isalpha](#ft_isalpha) |                       |             |
+| [ft_isdigit](#ft_isdigit) |                       |             |
 |                           |                       |             |
 |                           |                       |             |
 |                           |                       |             |
@@ -60,4 +61,10 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 
 |                 Descripción                 |       Parámetro       |                          Valor retornado                           |
 | :-----------------------------------------: | :-------------------: | :----------------------------------------------------------------: |
-| Comprueba si un caracter es alfabético o no | El caracter a testear | Devuelve 1 si es true (alfabético) o 0 si es false (no alfabético) |
+| Comprueba si un carácter es alfabético o no | El carácter a testear | Devuelve 1 si es true (alfabético) o 0 si es false (no alfabético) |
+
+## [ft_isdigit](./functions/ft_isdigit.c)
+
+|              Descripción              |       Parámetro       |                 Valor retornado                  |
+| :-----------------------------------: | :-------------------: | :----------------------------------------------: |
+| Comprueba si un carácter es un dígito | El carácter a testear | Devuelve 1 si es true (numérico) o 0 si es false |
