@@ -47,6 +47,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_isalpha`](#ft_isalpha) |                       |             |
 | [`ft_isdigit`](#ft_isdigit) |                       |             |
 | [`ft_isalnum`](#ft_isalnum) |                       |             |
+| [`ft_isascii`](#ft_isascii) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -75,3 +76,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                      Descripción                                      |                     Valor retornado                      |
 | :-----------------------------------------------------------------------------------: | :------------------------------------------------------: |
 | Comprueba si un carácter es alfanumérico (combinación de `ft_isalpha` y `ft_isdigit`) | Devuelve 1 si es `true` (alfanumérico) o 0 si es `false` |
+
+### [ft_isascii](./functions/ft_isascii.c)
+
+|                             Descripción                              |              Valor retornado              |
+| :------------------------------------------------------------------: | :---------------------------------------: |
+| Comprueba si un carácter es ASCII, cuyo rango es 0 a 127 (inclusive) | Devuelve 1 si es `true` o 0 si es `false` |
