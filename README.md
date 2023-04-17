@@ -89,3 +89,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                         Descripción                         |              Valor retornado              |
 | :---------------------------------------------------------: | :---------------------------------------: |
 | Comprueba si un carácter es imprimible (incluye el espacio) | Devuelve 1 si es `true` o 0 si es `false` |
+
+### [ft_strlen](./functions/ft_strlen.c)
+
+|                    Descripción                     |         Valor retornado         |
+| :------------------------------------------------: | :-----------------------------: |
+| Calcula la longitud de una cadena apuntada por str | Devuelve la longitud del string |
