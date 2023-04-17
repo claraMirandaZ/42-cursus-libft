@@ -48,6 +48,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_isdigit`](#ft_isdigit) |                       |             |
 | [`ft_isalnum`](#ft_isalnum) |                       |             |
 | [`ft_isascii`](#ft_isascii) |                       |             |
+| [`ft_isprint`](#ft_isprint) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -82,3 +83,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                             Descripción                              |              Valor retornado              |
 | :------------------------------------------------------------------: | :---------------------------------------: |
 | Comprueba si un carácter es ASCII, cuyo rango es 0 a 127 (inclusive) | Devuelve 1 si es `true` o 0 si es `false` |
+
+### [ft_isprint](./functions/ft_isprint.c)
+
+|                         Descripción                         |              Valor retornado              |
+| :---------------------------------------------------------: | :---------------------------------------: |
+| Comprueba si un carácter es imprimible (incluye el espacio) | Devuelve 1 si es `true` o 0 si es `false` |
