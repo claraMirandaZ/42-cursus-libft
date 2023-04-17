@@ -49,6 +49,8 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_isalnum`](#ft_isalnum) |                       |             |
 | [`ft_isascii`](#ft_isascii) |                       |             |
 | [`ft_isprint`](#ft_isprint) |                       |             |
+|  [`ft_strlen`](#ft_strlen)  |                       |             |
+|  [`ft_memset`](#ft_memset)  |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -95,3 +97,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                    Descripción                     |         Valor retornado         |
 | :------------------------------------------------: | :-----------------------------: |
 | Calcula la longitud de una cadena apuntada por str | Devuelve la longitud del string |
+
+### [ft_memset](./functions/ft_memset.c)
+
+|                 Descripción                  |                Valor retornado                 |
+| :------------------------------------------: | :--------------------------------------------: |
+| Llena un bloque de memoria con un valor dado | Devuelve un puntero al área de memoria llenada |
