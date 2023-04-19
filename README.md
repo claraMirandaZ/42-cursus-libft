@@ -51,8 +51,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_isprint`](#ft_isprint) |                       |             |
 |  [`ft_strlen`](#ft_strlen)  |                       |             |
 |  [`ft_memset`](#ft_memset)  |                       |             |
-|                             |                       |             |
-|                             |                       |             |
+|   [`ft_bzero`](#ft_bzero)   |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -103,3 +102,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                 Descripción                  |                Valor retornado                 |
 | :------------------------------------------: | :--------------------------------------------: |
 | Llena un bloque de memoria con un valor dado | Devuelve un puntero al área de memoria llenada |
+
+### [ft_bzero](./functions/ft_bzero.c)
+
+|              Descripción              |                 Valor retornado                 |
+| :-----------------------------------: | :---------------------------------------------: |
+| Establece un bloque de memoria a cero | No devuelve nada (su tipo de retorno es `void`) |
