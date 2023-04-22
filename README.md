@@ -54,6 +54,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |   [`ft_bzero`](#ft_bzero)   |                       |             |
 |  [`ft_memcpy`](#ft_memcpy)  |                       |             |
 | [`ft_memmove`](#ft_memmove) |                       |             |
+| [`ft_strlcpy`](#ft_strlcpy) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -122,3 +123,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                   Descripción                                   |          Valor retornado          |
 | :-----------------------------------------------------------------------------: | :-------------------------------: |
 | Copia len bytes de la memoria de src a la memoria de dst, pudiendo superponerse | Un puntero a la cadena de destino |
+
+### [ft_strlcpy](./functions/ft_strlcpy.c)
+
+|                                             Descripción                                              |         Valor retornado          |
+| :--------------------------------------------------------------------------------------------------: | :------------------------------: |
+| Copia la cadena a la que apunta src, incluido el byte nulo de terminación, al búfer señalado por dst | La longitud de la cadena a crear |
