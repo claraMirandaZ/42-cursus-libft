@@ -52,6 +52,8 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |  [`ft_strlen`](#ft_strlen)  |                       |             |
 |  [`ft_memset`](#ft_memset)  |                       |             |
 |   [`ft_bzero`](#ft_bzero)   |                       |             |
+|  [`ft_memcpy`](#ft_memcpy)  |                       |             |
+| [`ft_memmove`](#ft_memmove) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -108,3 +110,15 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |              Descripción              |                 Valor retornado                 |
 | :-----------------------------------: | :---------------------------------------------: |
 | Establece un bloque de memoria a cero | No devuelve nada (su tipo de retorno es `void`) |
+
+### [ft_memcpy](./functions/ft_memcpy.c)
+
+|                                         Descripción                                          |          Valor retornado          |
+| :------------------------------------------------------------------------------------------: | :-------------------------------: |
+| Copia n bytes del área de memoria src a la memoria de dst. Estas áreas no deben superponerse | Un puntero a la cadena de destino |
+
+### [ft_memmove](./functions/ft_memmove.c)
+
+|                                   Descripción                                   |          Valor retornado          |
+| :-----------------------------------------------------------------------------: | :-------------------------------: |
+| Copia len bytes de la memoria de src a la memoria de dst, pudiendo superponerse | Un puntero a la cadena de destino |
