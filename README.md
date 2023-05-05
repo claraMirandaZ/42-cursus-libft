@@ -58,6 +58,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_strlcat`](#ft_strlcat) |                       |             |
 | [`ft_toupper`](#ft_toupper) |                       |             |
 | [`ft_tolower`](#ft_tolower) |                       |             |
+|  [`ft_strchr`](#ft_strchr)  |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -150,3 +151,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |            Descripción            |                                 Valor retornado                                 |
 | :-------------------------------: | :-----------------------------------------------------------------------------: |
 | Convierte un carácter a minúscula | Devuelve el carácter en minúscula, a menos que ya lo sea, que lo devuelve igual |
+
+### [ft_strchr](./functions/ft_strchr.c)
+
+|                       Descripción                       |                                         Valor retornado                                          |
+| :-----------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
+| Busca la primera aparición de un carácter en una cadena | Devuelve un puntero a la primera aparición del carácter en la cadena, o NULL, si no lo encuentra |
