@@ -59,6 +59,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_toupper`](#ft_toupper) |                       |             |
 | [`ft_tolower`](#ft_tolower) |                       |             |
 |  [`ft_strchr`](#ft_strchr)  |                       |             |
+| [`ft_strrchr`](#ft_strrchr) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -157,3 +158,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                       Descripción                       |                                         Valor retornado                                          |
 | :-----------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
 | Busca la primera aparición de un carácter en una cadena | Devuelve un puntero a la primera aparición del carácter en la cadena, o NULL, si no lo encuentra |
+
+### [ft_strrchr](./functions/ft_strrchr.c)
+
+|                      Descripción                       |                                         Valor retornado                                         |
+| :----------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
+| Busca la última aparición de un carácter en una cadena | Devuelve un puntero a la última aparición del carácter en la cadena, o NULL, si no lo encuentra |
