@@ -60,6 +60,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_tolower`](#ft_tolower) |                       |             |
 |  [`ft_strchr`](#ft_strchr)  |                       |             |
 | [`ft_strrchr`](#ft_strrchr) |                       |             |
+| [`ft_strncmp`](#ft_strncmp) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -164,3 +165,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                      Descripción                       |                                         Valor retornado                                         |
 | :----------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
 | Busca la última aparición de un carácter en una cadena | Devuelve un puntero a la última aparición del carácter en la cadena, o NULL, si no lo encuentra |
+
+### [ft_strncmp](./functions/ft_strncmp.c)
+
+|                   Descripción                    |                                                     Valor retornado                                                      |
+| :----------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
+| Compara los primeros n caracteres de dos cadenas | Devuelve un número negativo, cero o positivo, dependiendo de si la primera cadena es menor, igual o mayor que la segunda |
