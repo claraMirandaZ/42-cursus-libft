@@ -57,6 +57,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_strlcpy`](#ft_strlcpy) |                       |             |
 | [`ft_strlcat`](#ft_strlcat) |                       |             |
 | [`ft_toupper`](#ft_toupper) |                       |             |
+| [`ft_tolower`](#ft_tolower) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -143,3 +144,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |            Descripción            |                                 Valor retornado                                 |
 | :-------------------------------: | :-----------------------------------------------------------------------------: |
 | Convierte un carácter a mayúscula | Devuelve el carácter en mayúscula, a menos que ya lo sea, que lo devuelve igual |
+
+### [ft_tolower](./functions/ft_tolower.c)
+
+|            Descripción            |                                 Valor retornado                                 |
+| :-------------------------------: | :-----------------------------------------------------------------------------: |
+| Convierte un carácter a minúscula | Devuelve el carácter en minúscula, a menos que ya lo sea, que lo devuelve igual |
