@@ -62,7 +62,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_strrchr`](#ft_strrchr) |                       |             |
 | [`ft_strncmp`](#ft_strncmp) |                       |             |
 |  [`ft_memchr`](#ft_memchr)  |                       |             |
-|                             |                       |             |
+|  [`ft_memcmp`](#ft_memcmp)  |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -177,3 +177,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                            Descripción                             |                                              Valor retornado                                              |
 | :----------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
 | Busca la primera aparición de un carácter en una cadena de memoria | Un puntero a la posición de la memoria en la que se encuentra el valor buscado, o NULL si no se encuentra |
+
+### [ft_memcmp](./functions/ft_memcmp.c)
+
+|                                    Descripción                                    |                                         Valor retornado                                          |
+| :-------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
+| Compara los primeros n bytes de los bloques de memoria apuntados por dos punteros | Un valor entero que indica la diferencia en ASCII entre los bloques de memoria, o cero si no hay |
