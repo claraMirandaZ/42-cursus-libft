@@ -61,7 +61,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |  [`ft_strchr`](#ft_strchr)  |                       |             |
 | [`ft_strrchr`](#ft_strrchr) |                       |             |
 | [`ft_strncmp`](#ft_strncmp) |                       |             |
-|                             |                       |             |
+|  [`ft_memchr`](#ft_memchr)  |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -171,3 +171,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                   Descripción                    |                                                     Valor retornado                                                      |
 | :----------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
 | Compara los primeros n caracteres de dos cadenas | Devuelve un número negativo, cero o positivo, dependiendo de si la primera cadena es menor, igual o mayor que la segunda |
+
+### [ft_memchr](./functions/ft_memchr.c)
+
+|                            Descripción                             |                                              Valor retornado                                              |
+| :----------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+| Busca la primera aparición de un carácter en una cadena de memoria | Un puntero a la posición de la memoria en la que se encuentra el valor buscado, o NULL si no se encuentra |
