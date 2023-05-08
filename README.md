@@ -64,6 +64,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |  [`ft_memchr`](#ft_memchr)  |                       |             |
 |  [`ft_memcmp`](#ft_memcmp)  |                       |             |
 | [`ft_strnstr`](#ft_strnstr) |                       |             |
+|    [`ft_atoi`](#ft_atoi)    |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -189,3 +190,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                                           Descripción                                                           |                                           Valor retornado                                           |
 | :-----------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
 | Busca la primera aparición de una subcadena _aguja_ dentro de una cadena más grande _pajar_ un número máximo indicado por `len` | Devuelve un puntero al comienzo de la _aguja_ en el _pajar_, o NULL si no se encuentra la subcadena |
+
+### [ft_atoi](./functions/ft_atoi.c)
+
+|                                    Descripción                                    |                                 Valor retornado                                 |
+| :-------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+| Convierte la parte inicial de la cadena apuntada por str a una representación int | Si tiene éxito, devuelve el valor convertido a int con el signo correspondiente |
