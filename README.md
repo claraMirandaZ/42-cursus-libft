@@ -63,7 +63,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_strncmp`](#ft_strncmp) |                       |             |
 |  [`ft_memchr`](#ft_memchr)  |                       |             |
 |  [`ft_memcmp`](#ft_memcmp)  |                       |             |
-|                             |                       |             |
+| [`ft_strnstr`](#ft_strnstr) |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 |                             |                       |             |
@@ -183,3 +183,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                    Descripción                                    |                                         Valor retornado                                          |
 | :-------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
 | Compara los primeros n bytes de los bloques de memoria apuntados por dos punteros | Un valor entero que indica la diferencia en ASCII entre los bloques de memoria, o cero si no hay |
+
+### [ft_strnstr](./functions/ft_strnstr.c)
+
+|                                                           Descripción                                                           |                                           Valor retornado                                           |
+| :-----------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+| Busca la primera aparición de una subcadena _aguja_ dentro de una cadena más grande _pajar_ un número máximo indicado por `len` | Devuelve un puntero al comienzo de la _aguja_ en el _pajar_, o NULL si no se encuentra la subcadena |
