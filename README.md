@@ -65,7 +65,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |  [`ft_memcmp`](#ft_memcmp)  |                       |             |
 | [`ft_strnstr`](#ft_strnstr) |                       |             |
 |    [`ft_atoi`](#ft_atoi)    |                       |             |
-|                             |                       |             |
+|  [`ft_calloc`](#ft_calloc)  |                       |             |
 |                             |                       |             |
 |                             |                       |             |
 
@@ -196,3 +196,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                    Descripción                                    |                                 Valor retornado                                 |
 | :-------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
 | Convierte la parte inicial de la cadena apuntada por str a una representación int | Si tiene éxito, devuelve el valor convertido a int con el signo correspondiente |
+
+### [ft_calloc](./functions/ft_calloc.c)
+
+|                                              Descripción                                              |                           Valor retornado                           |
+| :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| Asigna memoria dinámicamente y reserva un bloque de memoria contigua, y luego lo inicializa con ceros | El puntero que apunta al bloque de memoria reservado e inicializado |
