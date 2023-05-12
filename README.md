@@ -41,33 +41,32 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 
 ## Lista de funciones
 
-|      Funciones de libc      | Funciones adicionales | Parte bonus |
-| :-------------------------: | :-------------------: | :---------: |
-| De la librería `<ctype.h>`  |                       |             |
-| [`ft_isalpha`](#ft_isalpha) |                       |             |
-| [`ft_isdigit`](#ft_isdigit) |                       |             |
-| [`ft_isalnum`](#ft_isalnum) |                       |             |
-| [`ft_isascii`](#ft_isascii) |                       |             |
-| [`ft_isprint`](#ft_isprint) |                       |             |
-|  [`ft_strlen`](#ft_strlen)  |                       |             |
-|  [`ft_memset`](#ft_memset)  |                       |             |
-|   [`ft_bzero`](#ft_bzero)   |                       |             |
-|  [`ft_memcpy`](#ft_memcpy)  |                       |             |
-| [`ft_memmove`](#ft_memmove) |                       |             |
-| [`ft_strlcpy`](#ft_strlcpy) |                       |             |
-| [`ft_strlcat`](#ft_strlcat) |                       |             |
-| [`ft_toupper`](#ft_toupper) |                       |             |
-| [`ft_tolower`](#ft_tolower) |                       |             |
-|  [`ft_strchr`](#ft_strchr)  |                       |             |
-| [`ft_strrchr`](#ft_strrchr) |                       |             |
-| [`ft_strncmp`](#ft_strncmp) |                       |             |
-|  [`ft_memchr`](#ft_memchr)  |                       |             |
-|  [`ft_memcmp`](#ft_memcmp)  |                       |             |
-| [`ft_strnstr`](#ft_strnstr) |                       |             |
-|    [`ft_atoi`](#ft_atoi)    |                       |             |
-|  [`ft_calloc`](#ft_calloc)  |                       |             |
-|  [`ft_strdup`](#ft_strdup)  |                       |             |
-|                             |                       |             |
+|      Funciones de libc      |   Funciones adicionales   | Parte bonus |
+| :-------------------------: | :-----------------------: | :---------: |
+| De la librería `<ctype.h>`  | [`ft_substr`](#ft_substr) |             |
+| [`ft_isalpha`](#ft_isalpha) |                           |             |
+| [`ft_isdigit`](#ft_isdigit) |                           |             |
+| [`ft_isalnum`](#ft_isalnum) |                           |             |
+| [`ft_isascii`](#ft_isascii) |                           |             |
+| [`ft_isprint`](#ft_isprint) |                           |             |
+|  [`ft_strlen`](#ft_strlen)  |                           |             |
+|  [`ft_memset`](#ft_memset)  |                           |             |
+|   [`ft_bzero`](#ft_bzero)   |                           |             |
+|  [`ft_memcpy`](#ft_memcpy)  |                           |             |
+| [`ft_memmove`](#ft_memmove) |                           |             |
+| [`ft_strlcpy`](#ft_strlcpy) |                           |             |
+| [`ft_strlcat`](#ft_strlcat) |                           |             |
+| [`ft_toupper`](#ft_toupper) |                           |             |
+| [`ft_tolower`](#ft_tolower) |                           |             |
+|  [`ft_strchr`](#ft_strchr)  |                           |             |
+| [`ft_strrchr`](#ft_strrchr) |                           |             |
+| [`ft_strncmp`](#ft_strncmp) |                           |             |
+|  [`ft_memchr`](#ft_memchr)  |                           |             |
+|  [`ft_memcmp`](#ft_memcmp)  |                           |             |
+| [`ft_strnstr`](#ft_strnstr) |                           |             |
+|    [`ft_atoi`](#ft_atoi)    |                           |             |
+|  [`ft_calloc`](#ft_calloc)  |                           |             |
+|  [`ft_strdup`](#ft_strdup)  |                           |             |
 
 <br>
 
@@ -208,3 +207,11 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                       Descripción                                       |                 Valor retornado                 |
 | :-------------------------------------------------------------------------------------: | :---------------------------------------------: |
 | Crea una copia de una cadena de caracteres dada y devuelve un puntero a la nueva cadena | Devuelve un puntero a la cadena recién asignada |
+
+<hr>
+
+### [ft_substr](./functions/ft_substr.c)
+
+|                                                                         Descripción                                                                         |                                                                            Valor retornado                                                                             |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Recibe una cadena, un índice y una longitud y su objetivo es devolver una subcadena de la original que empieza en su mismo índice y tiene la misma longitud | Si el índice está fuera de los límites de la cadena original, se devuelve otra vacía. Si no se puede asignar memoria para la nueva cadena, se devuelve un puntero nulo |
