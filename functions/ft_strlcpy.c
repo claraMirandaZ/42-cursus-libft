@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/* La función ft_strlcpy copia los caracteres de una cadena src en otra cadena dst con un tamaño máximo especificado por el argumento size. La función devuelve el número de caracteres que se habrían copiado si el tamaño del buffer hubiera sido suficiente. Esta función es útil para evitar desbordamientos de buffer. */
+/* La función ft_strlcpy copia los caracteres de una cadena src en otra cadena dst con un tamaño máximo especificado por el argumento size. La función devuelve el número de caracteres que se habrían copiado si el tamaño del buffer hubiera sido suficiente. Esta función es útil para evitar desbordamientos de buffer */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -52,7 +52,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++; // y se itera para recorrer src
 	}
   dst[i] = '\0'; // Cierra con el carácter nulo de terminación
-  
+
   return (len); // Devuelve la longitud de src (cadena creada)
 }
 */

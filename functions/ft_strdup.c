@@ -16,21 +16,21 @@
 
 char *ft_strdup(const char *s1)
 {
-    char *ptr;
-    int i;
+  char *ptr;
+  int i;
 
-    i = 0;
-    ptr = NULL;
-    ptr = malloc (ft_strlen(s1) * sizeof(char) + 1); // Asigna memoria para la cadena duplicada
-    if (!ptr) // Si el puntero es nulo, la asignación falló
-        return (0); // y devuelve un puntero nulo
-    while (s1[i] != '\0') // Mientras el carácter en la posición i de la cadena no sea el carácter nulo de terminación
-    {
-        ptr[i] = s1[i]; // Recorre la cadena de origen s1 y copia cada uno de sus caracteres en la nueva cadena ptr
-        i++; // Itera
-    }
-    ptr[i] = '\0'; // Agrega el caracter nulo final a la cadena duplicada
-    return (ptr); // Devuelve el puntero a la cadena duplicada
+  i = 0;
+  ptr = NULL;
+  ptr = malloc (ft_strlen(s1) * sizeof(char) + 1); // Asigna memoria para la cadena duplicada
+  if (!ptr) // Si el puntero es nulo, la asignación falló
+      return (0); // y devuelve un puntero nulo
+  while (s1[i] != '\0') // Mientras el carácter en la posición i de la cadena no sea el carácter nulo de terminación
+  {
+    ptr[i] = s1[i]; // Recorre la cadena de origen s1 y copia cada uno de sus caracteres en la nueva cadena ptr
+    i++; // Itera
+  }
+  ptr[i] = '\0'; // Agrega el caracter nulo final a la cadena duplicada
+  return (ptr); // Devuelve el puntero a la cadena duplicada
 }
 
 /*

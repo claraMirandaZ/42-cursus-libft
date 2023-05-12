@@ -21,6 +21,4 @@ int	ft_toupper(int c) // La función toma como argumento un entero que represent
 	return (c); // Si no es una minúscula, se retorna el carácter tal cual
 }
 
-/*
-En la tabla ASCII, las letras mayúsculas y minúsculas tienen valores de caracteres consecutivos, lo que significa que la diferencia de valores entre una letra mayúscula y su correspondiente letra minúscula es constante. En particular, la diferencia es de 32 unidades. Por lo tanto, si se tiene un carácter minúscula y se desea convertirlo en su equivalente en mayúscula, se puede restar 32 a su valor ASCII para obtener la letra mayúscula correspondiente.
-*/
+/* En la tabla ASCII, las letras mayúsculas y minúsculas tienen valores de caracteres consecutivos, lo que significa que la diferencia de valores entre una letra mayúscula y su correspondiente letra minúscula es constante. En particular, la diferencia es de 32 unidades. Por lo tanto, si se tiene un carácter minúscula y se desea convertirlo en su equivalente en mayúscula, se puede restar 32 a su valor ASCII para obtener la letra mayúscula correspondiente */

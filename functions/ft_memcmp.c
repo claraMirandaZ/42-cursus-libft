@@ -24,7 +24,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	ptr2 = str2; // Inicializamos el puntero ptr2 con str2
 	i = 0; // Inicializamos el contador a 0
 
-	while (i < n) //  Mientras no hayamos llegado al final de los datos a comparar y no hayamos encontrado una diferencia
+	while (i < n) // Mientras no hayamos llegado al final de los datos a comparar y no hayamos encontrado una diferencia
 	{
 		if (ptr1[i] != ptr2[i]) // Si encontramos caracteres diferentes
 			return ((unsigned char)ptr1[i] - (unsigned char)ptr2[i]); // Retornamos la diferencia en ASCII

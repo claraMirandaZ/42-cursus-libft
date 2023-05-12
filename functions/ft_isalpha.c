@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include 'libft.h'
+#include "libft.h"
 
 /* ft_isalpha comprueba si un caracter es alfabético, devolviendo 1 si lo es y 0 si no */
 
@@ -23,8 +23,7 @@ int	ft_isalpha(int c)
 
 /* 
 Función optimizada eliminando código repetitivo o innecesario:
-
 int ft_isalpha(int c) {
-    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+	return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 }
 */

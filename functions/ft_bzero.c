@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include 'libft.h'
+#include "libft.h"
 
 /* Esta función se utiliza para establecer un bloque de memoria a cero. Es equivalente a ft_memset, pero ft_bzero se utiliza específicamente para establecer una región de memoria a cero, mientras que ft_memset se puede usar para establecer una región de memoria a cualquier valor */
 
 void	ft_bzero(void *s, size_t n) // Puntero genérico a la memoria y un tamaño -cuántos bytes se deben establecer a 0
 {
 	unsigned char	*src; // Puntero sin signo src que apunta a la dirección de memoria del bloque s
-	size_t			i; // Contador para iterar a través del bloque de memoria
+	size_t	i; // Contador para iterar a través del bloque de memoria
 
 	src = (unsigned char *)s; 
 	i = 0;

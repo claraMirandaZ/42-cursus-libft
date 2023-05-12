@@ -25,38 +25,38 @@ size_t ft_strlen(const char *c) {
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize) {
 
-    size_t i, srclen, dstlen; // Se pueden declarar por separado
-    
-    i = 0;
-    srclen = ft_strlen(src); // Calcula la longitud de la cadena src
-    dstlen = ft_strlen(dst); // Calcula la longitud de la cadena dst
+  size_t i, srclen, dstlen; // Se pueden declarar por separado
 
-    // Control de errores: si el numero de caracteres a copiar es cero
-    if (dstsize == 0) {
-		  return (srclen); // Devuelve la longitud original
-    }
-    if (dstsize < dstlen + 1) {
-      return (dstsize + srclen); // Si no hay suficiente espacio para concatenar las cadenas, devuelve el tamaño total que se necesitaría
-    }
-    while (src[i] && i < dstsize - dstlen - 1) { // Mientras haya caracteres en la cadena src y espacio suficiente para concatenar las cadenas,
-        dst[dstlen + i] = src[i]; // concatena los caracteres
-        i++;
-    }
-    dst[dstlen + i] = '\0'; // Agrega el carácter nulo al final de la cadena concatenada
-    return (dstlen + srclen); // Y devuelve el tamaño total de la cadena concatenada
+  i = 0;
+  srclen = ft_strlen(src); // Calcula la longitud de la cadena src
+  dstlen = ft_strlen(dst); // Calcula la longitud de la cadena dst
+
+  // Control de errores: si el numero de caracteres a copiar es cero
+  if (dstsize == 0) {
+    return (srclen); // Devuelve la longitud original
+  }
+  if (dstsize < dstlen + 1) {
+    return (dstsize + srclen); // Si no hay suficiente espacio para concatenar las cadenas, devuelve el tamaño total que se necesitaría
+  }
+  while (src[i] && i < dstsize - dstlen - 1) { // Mientras haya caracteres en la cadena src y espacio suficiente para concatenar las cadenas,
+    dst[dstlen + i] = src[i]; // concatena los caracteres
+    i++;
+  }
+  dst[dstlen + i] = '\0'; // Agrega el carácter nulo al final de la cadena concatenada
+  return (dstlen + srclen); // Y devuelve el tamaño total de la cadena concatenada
 }
 
 /*
 int main() {
-    char str1[50] = "Hola, "; // Primera cadena a concatenar
-    char str2[50] = "mundo!"; // Segunda cadena a concatenar
-    size_t size = sizeof(str1)/sizeof(str1[0]); // Tamaño del buffer de destino
+  char str1[50] = "Hola, "; // Primera cadena a concatenar
+  char str2[50] = "mundo!"; // Segunda cadena a concatenar
+  size_t size = sizeof(str1)/sizeof(str1[0]); // Tamaño del buffer de destino
 
-    printf("Cadena concatenada: %s\n", str1); // Imprime la cadena original
-    ft_strlcat(str1, str2, size); // Llama a la función para concatenar las cadenas de forma segura
-    printf("Cadena concatenada: %s\n", str1); // Imprime la cadena concatenada
+  printf("Cadena concatenada: %s\n", str1); // Imprime la cadena original
+  ft_strlcat(str1, str2, size); // Llama a la función para concatenar las cadenas de forma segura
+  printf("Cadena concatenada: %s\n", str1); // Imprime la cadena concatenada
 
-    return 0;
+  return 0;
 }
 */
 

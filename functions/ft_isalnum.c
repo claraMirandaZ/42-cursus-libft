@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include 'libft.h'
+#include "libft.h"
 
-/* ft_isalnum comprueba si el integer corresponde a un carácter alfanumérico en la tabla ASCII, (por eso los rangos de 0 a 9, a a z y A a Z). Es una combinación de ft_isalpha y ft_isdigit; si el integer es alfanumérico (true) devuelve 1, si no (false), devuelve 0. */
+/* ft_isalnum comprueba si el integer corresponde a un carácter alfanumérico en la tabla ASCII, (por eso los rangos de 0 a 9, a a z y A a Z). Es una combinación de ft_isalpha y ft_isdigit; si el integer es alfanumérico (true) devuelve 1, si no (false), devuelve 0 */
 
 int		ft_isalnum(int c)
 {
@@ -25,6 +25,6 @@ int		ft_isalnum(int c)
 /*
 Función optimizada eliminando código repetitivo o innecesario:
 int ft_isalnum(int c) {
-    return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	return ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 */

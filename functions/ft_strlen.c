@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include 'libft.h'
+#include "libft.h"
 
-/* Esta función computa la longitud de un string, iterando por él hasta que llega al final (carácter nulo de terminación '\0'), retornando el índice de dicho carácter. */
+/* Esta función computa la longitud de un string, iterando por él hasta que llega al final (carácter nulo de terminación '\0'), retornando el índice de dicho carácter */
 
 size_t	ft_strlen(const char *str)
 {

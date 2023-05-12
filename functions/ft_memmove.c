@@ -43,8 +43,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 }
 
 /* 
-Otra versión usando ft_memcpy(), que es más rápida para el caso de que no haya superposición
-
+Otra versión usando ft_memcpy(), que es más rápida para el caso de que no haya superposición:
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
   // Se definen dos punteros d y s como unsigned char, que apuntarán a la dirección de memoria de dst y src, respectivamente

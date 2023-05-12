@@ -16,8 +16,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t		i;		// Variable para iterar sobre la memoria
-	const char	*str;		// Convierte el puntero constante void en un puntero constante char para facilitar el acceso a los datos
+	size_t	i; // Variable para iterar sobre la memoria
+	const char	*str; // Convierte el puntero constante void en un puntero constante char para facilitar el acceso a los datos
 
 	str = s; // La variable str se inicializa con el puntero constante s
 	i = 0; // Inicializa el contador de iteración en cero

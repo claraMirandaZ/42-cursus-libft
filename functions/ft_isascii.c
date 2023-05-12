@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include 'libft.h'
+#include "libft.h"
 
-/* ft_isascii comprueba si el parámetro `c` es un carácter válido de la tabla ASCII o no, siendo el rango válido de 0 (NULL) a 127 (octal 0177 DELete)*/
+/* ft_isascii comprueba si el parámetro c es un carácter válido de la tabla ASCII o no, siendo el rango válido de 0 (NULL) a 127 (octal 0177 DELete) */
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

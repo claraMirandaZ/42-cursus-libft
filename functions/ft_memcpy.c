@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-/* La función ft_memcpy() se usa para copiar un bloque de memoria de una ubicación a otra 
+/* La función ft_memcpy() se usa para copiar un bloque de memoria de una ubicación a otra.
 Los parámetros son:
 - dest: puntero a la ubicación de destino donde se copiarán los datos.
 - src: puntero a la ubicación de origen de donde se copiarán los datos.
 - n: cantidad de bytes que se copiarán.
 
-Esta función es similar a ft_memmove(), pero no garantiza que los bloques de memoria se copien correctamente si se superponen. Si se necesitan garantías en caso de solapamiento, se debe usar ft_memmove().*/
+Esta función es similar a ft_memmove(), pero no garantiza que los bloques de memoria se copien correctamente si se superponen. Si se necesitan garantías en caso de solapamiento, se debe usar ft_memmove() */
 
 void	*ft_memccpy(void *dst, const void *src, size_t n)
 {
 	// Se declaran los punteros char para dst y src, así como la variable i para llevar el control del número de bytes copiados
 	char	*d;
 	char	*s;
-	size_t			i;
+	size_t	i;
 
 	if (!dst && !src)
 		return (NULL); // Se verifica si dst y src son nulos
@@ -48,7 +48,6 @@ void	*ft_memccpy(void *dst, const void *src, size_t n)
 
 /*
 Otra forma:
-
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*d;

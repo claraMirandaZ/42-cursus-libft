@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clmirand <clmirand@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,9 +12,7 @@
 
 #include "libft.h"
 
-/*
-La función busca la primera aparición del carácter c en la cadena str y devuelve un puntero al carácter encontrado. Si el carácter no se encuentra, devuelve un puntero nulo. El parámetro c se convierte en un valor entero de tipo char antes de ser comparado.
-*/
+/* La función busca la primera aparición del carácter c en la cadena str y devuelve un puntero al carácter encontrado. Si el carácter no se encuentra, devuelve un puntero nulo. El parámetro c se convierte en un valor entero de tipo char antes de ser comparado */
 
 char	*ft_strchr(const char *str, int c)
 {

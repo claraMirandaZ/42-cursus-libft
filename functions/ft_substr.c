@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"  
+#include "libft.h"
 
-/* La función ft_substr toma como entrada una cadena s, un índice start y una longitud len, y devuelve una nueva cadena que es una subcadena de la cadena de entrada s a partir del índice start con una longitud len especificada. Si start está fuera de los límites de s, se devuelve una cadena vacía. Si no se puede asignar memoria para la nueva cadena, se devuelve un puntero nulo. */
+/* La función ft_substr toma como entrada una cadena s, un índice start y una longitud len, y devuelve una nueva cadena que es una subcadena de la cadena de entrada s a partir del índice start con una longitud len especificada. Si start está fuera de los límites de s, se devuelve una cadena vacía. Si no se puede asignar memoria para la nueva cadena, se devuelve un puntero nulo */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
