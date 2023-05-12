@@ -66,7 +66,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_strnstr`](#ft_strnstr) |                       |             |
 |    [`ft_atoi`](#ft_atoi)    |                       |             |
 |  [`ft_calloc`](#ft_calloc)  |                       |             |
-|                             |                       |             |
+|  [`ft_strdup`](#ft_strdup)  |                       |             |
 |                             |                       |             |
 
 <br>
@@ -202,3 +202,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                              Descripción                                              |                           Valor retornado                           |
 | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------: |
 | Asigna memoria dinámicamente y reserva un bloque de memoria contigua, y luego lo inicializa con ceros | El puntero que apunta al bloque de memoria reservado e inicializado |
+
+### [ft_strdup](./functions/ft_strdup.c)
+
+|                                       Descripción                                       |                 Valor retornado                 |
+| :-------------------------------------------------------------------------------------: | :---------------------------------------------: |
+| Crea una copia de una cadena de caracteres dada y devuelve un puntero a la nueva cadena | Devuelve un puntero a la cadena recién asignada |
