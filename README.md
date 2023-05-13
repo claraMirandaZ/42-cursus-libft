@@ -45,10 +45,10 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | :-------------------------: | :-------------------------: | :---------: |
 | [`ft_isalpha`](#ft_isalpha) |  [`ft_substr`](#ft_substr)  |             |
 | [`ft_isdigit`](#ft_isdigit) | [`ft_strjoin`](#ft_strjoin) |             |
-| [`ft_isalnum`](#ft_isalnum) |             [`ft_strtrim`](#ft_strtrim)               |             |
+| [`ft_isalnum`](#ft_isalnum) | [`ft_strtrim`](#ft_strtrim) |             |
 | [`ft_isascii`](#ft_isascii) |                             |             |
 | [`ft_isprint`](#ft_isprint) |                             |             |
-|  [`ft_strlen`](#ft_strlen)  |           ft_strtrim                  |             |
+|  [`ft_strlen`](#ft_strlen)  |                             |             |
 |  [`ft_memset`](#ft_memset)  |                             |             |
 |   [`ft_bzero`](#ft_bzero)   |                             |             |
 |  [`ft_memcpy`](#ft_memcpy)  |                             |             |
