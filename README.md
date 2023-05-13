@@ -217,6 +217,6 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 
 ### [ft_strjoin](./functions/ft_strjoin.c)
 
-|                                                                                 Descripción                                                                                  |                                        Valor retornado                                         |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------: |
-| Elimina todos los caracteres que se encuentran al principio y al final de la cadena `s1` que coinciden con cualquiera de los caracteres que se encuentran en la cadena `set` | Devuelve una subcadena de `s1` que comienza en el índice `i` y tiene una longitud de `len - i` |
+|                                 Descripción                                 |              Valor retornado               |
+| :-------------------------------------------------------------------------: | :----------------------------------------: |
+| Concatena dos cadenas de caracteres para crear una nueva que contiene ambas | Devuelve un puntero a la cadena resultante |

@@ -12,29 +12,40 @@
 
 #include "libft.h"
 
-/* La función ft_strtrim recorta los caracteres que aparecen en el conjunto set del principio y el final de la cadena de caracteres s1. En otras palabras, elimina todos los caracteres que se encuentran al principio y al final de la cadena s1 que coinciden con cualquiera de los caracteres que se encuentran en la cadena set */
+/* ft_strjoin concatena dos cadenas de caracteres (s1 y s2) para crear una nueva cadena que contiene ambas. La nueva cadena resultante se almacena en un nuevo bloque de memoria, que se asigna dinámicamente en tiempo de ejecución, utilizando la función malloc */
 
-char *ft_strtrim(char const *s1, char const *set)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
-	size_t len;
-	size_t size;
+	int i;
+	int len1;
+	int len2;
+	char *ptr;
 
-	if (!s1) // Verifica si s1 es nulo y devuelve NULL si es así
-		return (NULL);
+	i = 0;
+	len1 = ft_strlen(s1); // Obtiene la longitud de s1
+	len2 = ft_strlen(s2); // Obtiene la longitud de s2
+	ptr = NULL; // Inicializa el puntero a NULL
+	ptr = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char)); // Asigna memoria para la cadena resultante
 
-	i = 0; // Inicializa i en 0
-	len = ft_strlen(s1); // y len en la longitud de s1
+	if (!ptr)
+		return (0); // Si malloc falla, devuelve NULL
+	
+	while (i < len1)
+	{
+		ptr[i] = s1[i]; // Copia los caracteres de s1 a ptr
+		i++;
+	}
 
-	while (ft_strchr(set, s1[i]) && s1[i]) // Mueve i hasta el primer carácter de s1 que no está en set
-		i++; // E itera
+	i = 0;
 
-	while (ft_strchr(set, s1[len]) && len) // Mueve len hasta el último carácter de s1 que no está en set
-		len--;
+	while (i < len2)
+	{
+		ptr[len1 + i] = s2[i]; // Copia los caracteres de s2 a ptr después de s1
+		i++;
+	}
 
-	size = len - i; // Calcula el tamaño del string, recortado
-
-	return (ft_substr(s1, i, size + 1)); // Llama a la función ft_substr para devolver la cadena de caracteres recortada
+	ptr[len1 + i] = '\0'; // Agrega el caracter nulo de terminación al final de la cadena
+	return (ptr); // Devuelve el puntero a la cadena resultante
 }
 
 /*
