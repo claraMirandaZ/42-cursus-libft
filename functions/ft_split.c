@@ -16,7 +16,7 @@
 /* ft_split se utiliza para dividir una cadena en subcadenas más pequeñas basadas en un delimitador dado. Toma dos argumentos: la cadena a dividir (s) y el carácter delimitador (c) */
 
 /* Función auxiliar para contar el número de palabras en la cadena */
-static int	count_words(char const *s, char c)
+static int	ft_count_words(char const *s, char c)
 {
   // Declaramos e inicializamos variables
 	int count = 0; // Contador de palabras
@@ -39,7 +39,7 @@ static int	count_words(char const *s, char c)
 }
 
 /* Función auxiliar para copiar una palabra en una nueva cadena */
-static char	*copy_word(const char *s, char c)
+static char	*ft_copy_word(const char *s, char c)
 {
 	int		i;
 	char	*word;
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return NULL; // Verifica si la cadena es nula
 
-	word_count = count_words(s, c); // Cuenta el número de palabras
+	word_count = ft_count_words(s, c); // Cuenta el número de palabras
 	result = (char **)malloc((word_count + 1) * sizeof(char *)); // Reserva memoria para el array de cadenas
 
 	if (!result)
@@ -83,7 +83,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*s != c) // Se encuentra un carácter de palabra
 		{
-			result[i] = copy_word(s, c); // Copia la palabra en una nueva subcadena
+			result[i] = ft_copy_word(s, c); // Copia la palabra en una nueva subcadena
 			if (!result[i]) // Verifica si ocurrió un error al copiar la palabra
 			{
 				while (i > 0)
