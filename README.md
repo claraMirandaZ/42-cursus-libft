@@ -51,7 +51,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |  [`ft_strlen`](#ft_strlen)  |    [`ft_strmapi`](#ft_strmapi)    |             |
 |  [`ft_memset`](#ft_memset)  |   [`ft_striteri`](#ft_striteri)   |             |
 |   [`ft_bzero`](#ft_bzero)   | [`ft_putchar_fd`](#ft_putchar_fd) |             |
-|  [`ft_memcpy`](#ft_memcpy)  |                                   |             |
+|  [`ft_memcpy`](#ft_memcpy)  |  [`ft_putstr_fd`](#ft_putstr_fd)  |             |
 | [`ft_memmove`](#ft_memmove) |                                   |             |
 | [`ft_strlcpy`](#ft_strlcpy) |                                   |             |
 | [`ft_strlcat`](#ft_strlcat) |                                   |             |
@@ -256,3 +256,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                       Descripción                       |                       Valor retornado                       |
 | :-----------------------------------------------------: | :---------------------------------------------------------: |
 | Envía el carácter `c` al _file descriptor_ especificado | No devuelve ningún valor, ya que su tipo de retorno es void |
+
+### [ft_putstr_fd](./functions/ft_putstr_fd.c)
+
+|                      Descripción                      |                       Valor retornado                       |
+| :---------------------------------------------------: | :---------------------------------------------------------: |
+| Envía la string `s` al _file descriptor_ especificado | No devuelve ningún valor, ya que su tipo de retorno es void |
