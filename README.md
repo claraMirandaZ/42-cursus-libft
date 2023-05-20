@@ -48,7 +48,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_isalnum`](#ft_isalnum) | [`ft_strtrim`](#ft_strtrim) |             |
 | [`ft_isascii`](#ft_isascii) |   [`ft_split`](ft_split)    |             |
 | [`ft_isprint`](#ft_isprint) |    [`ft_itoa`](ft_itoa)     |             |
-|  [`ft_strlen`](#ft_strlen)  |                             |             |
+|  [`ft_strlen`](#ft_strlen)  | [`ft_strmapi`](ft_strmapi)  |             |
 |  [`ft_memset`](#ft_memset)  |                             |             |
 |   [`ft_bzero`](#ft_bzero)   |                             |             |
 |  [`ft_memcpy`](#ft_memcpy)  |                             |             |
@@ -238,3 +238,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                                                  Descripción                                                  |                              Valor retornado                               |
 | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------: |
 | Convierte un número entero en una cadena de caracteres (utilizando malloc para asignar memoria dinámicamente) | Devuelve la string que representa ese valor entero recibido como argumento |
+
+### [ft_strmapi](./functions/ft_strmapi.c)
+
+|                                        Descripción                                        |                         Valor retornado                          |
+| :---------------------------------------------------------------------------------------: | :--------------------------------------------------------------: |
+| A cada carácter de un string `s` le aplica una función `f`, transformándola completamente | Genera una nueva string con el resultado del uso sucesivo de `f` |
