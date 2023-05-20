@@ -47,7 +47,7 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 | [`ft_isdigit`](#ft_isdigit) | [`ft_strjoin`](#ft_strjoin) |             |
 | [`ft_isalnum`](#ft_isalnum) | [`ft_strtrim`](#ft_strtrim) |             |
 | [`ft_isascii`](#ft_isascii) |   [`ft_split`](ft_split)    |             |
-| [`ft_isprint`](#ft_isprint) |                             |             |
+| [`ft_isprint`](#ft_isprint) |    [`ft_itoa`](ft_itoa)     |             |
 |  [`ft_strlen`](#ft_strlen)  |                             |             |
 |  [`ft_memset`](#ft_memset)  |                             |             |
 |   [`ft_bzero`](#ft_bzero)   |                             |             |
@@ -232,3 +232,9 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 |                              Descripción                               |                       Valor retornado                       |
 | :--------------------------------------------------------------------: | :---------------------------------------------------------: |
 | Divide una cadena en subcadenas más pequeñas utilizando un delimitador | Devuelve un array de cadenas con las subcadenas resultantes |
+
+### [ft_itoa](./functions/ft_itoa.c)
+
+|                                                  Descripción                                                  |                              Valor retornado                               |
+| :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------: |
+| Convierte un número entero en una cadena de caracteres (utilizando malloc para asignar memoria dinámicamente) | Devuelve la string que representa ese valor entero recibido como argumento |
