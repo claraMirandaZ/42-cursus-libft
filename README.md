@@ -41,31 +41,31 @@ El manual de la GNU recomienda escribirlo con mayúscula porque suele aparecer c
 
 ## Lista de funciones
 
-|      Funciones de libc      |    Funciones adicionales     | Parte bonus |
-| :-------------------------: | :--------------------------: | :---------: |
-| [`ft_isalpha`](#ft_isalpha) |  [`ft_substr`](#ft_substr)   |             |
-| [`ft_isdigit`](#ft_isdigit) | [`ft_strjoin`](#ft_strjoin)  |             |
-| [`ft_isalnum`](#ft_isalnum) | [`ft_strtrim`](#ft_strtrim)  |             |
-| [`ft_isascii`](#ft_isascii) |    [`ft_split`](ft_split)    |             |
-| [`ft_isprint`](#ft_isprint) |     [`ft_itoa`](ft_itoa)     |             |
-|  [`ft_strlen`](#ft_strlen)  |  [`ft_strmapi`](ft_strmapi)  |             |
-|  [`ft_memset`](#ft_memset)  | [`ft_striteri`](ft_striteri) |             |
-|   [`ft_bzero`](#ft_bzero)   |                              |             |
-|  [`ft_memcpy`](#ft_memcpy)  |                              |             |
-| [`ft_memmove`](#ft_memmove) |                              |             |
-| [`ft_strlcpy`](#ft_strlcpy) |                              |             |
-| [`ft_strlcat`](#ft_strlcat) |                              |             |
-| [`ft_toupper`](#ft_toupper) |                              |             |
-| [`ft_tolower`](#ft_tolower) |                              |             |
-|  [`ft_strchr`](#ft_strchr)  |                              |             |
-| [`ft_strrchr`](#ft_strrchr) |                              |             |
-| [`ft_strncmp`](#ft_strncmp) |                              |             |
-|  [`ft_memchr`](#ft_memchr)  |                              |             |
-|  [`ft_memcmp`](#ft_memcmp)  |                              |             |
-| [`ft_strnstr`](#ft_strnstr) |                              |             |
-|    [`ft_atoi`](#ft_atoi)    |                              |             |
-|  [`ft_calloc`](#ft_calloc)  |                              |             |
-|  [`ft_strdup`](#ft_strdup)  |                              |             |
+|      Funciones de libc      |     Funciones adicionales     | Parte bonus |
+| :-------------------------: | :---------------------------: | :---------: |
+| [`ft_isalpha`](#ft_isalpha) |   [`ft_substr`](#ft_substr)   |             |
+| [`ft_isdigit`](#ft_isdigit) |  [`ft_strjoin`](#ft_strjoin)  |             |
+| [`ft_isalnum`](#ft_isalnum) |  [`ft_strtrim`](#ft_strtrim)  |             |
+| [`ft_isascii`](#ft_isascii) |    [`ft_split`](#ft_split)    |             |
+| [`ft_isprint`](#ft_isprint) |     [`ft_itoa`](#ft_itoa)     |             |
+|  [`ft_strlen`](#ft_strlen)  |  [`ft_strmapi`](#ft_strmapi)  |             |
+|  [`ft_memset`](#ft_memset)  | [`ft_striteri`](#ft_striteri) |             |
+|   [`ft_bzero`](#ft_bzero)   |                               |             |
+|  [`ft_memcpy`](#ft_memcpy)  |                               |             |
+| [`ft_memmove`](#ft_memmove) |                               |             |
+| [`ft_strlcpy`](#ft_strlcpy) |                               |             |
+| [`ft_strlcat`](#ft_strlcat) |                               |             |
+| [`ft_toupper`](#ft_toupper) |                               |             |
+| [`ft_tolower`](#ft_tolower) |                               |             |
+|  [`ft_strchr`](#ft_strchr)  |                               |             |
+| [`ft_strrchr`](#ft_strrchr) |                               |             |
+| [`ft_strncmp`](#ft_strncmp) |                               |             |
+|  [`ft_memchr`](#ft_memchr)  |                               |             |
+|  [`ft_memcmp`](#ft_memcmp)  |                               |             |
+| [`ft_strnstr`](#ft_strnstr) |                               |             |
+|    [`ft_atoi`](#ft_atoi)    |                               |             |
+|  [`ft_calloc`](#ft_calloc)  |                               |             |
+|  [`ft_strdup`](#ft_strdup)  |                               |             |
 
 <br>
 
