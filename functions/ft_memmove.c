@@ -15,14 +15,14 @@
 /* Esta función copia n bytes desde la dirección de memoria de src hacia la dirección de memoria de dest, asegurándose de manejar correctamente el solapamiento de los bloques de memoria. En caso de que dest y src se superpongan, se copia desde atrás hacia adelante para evitar sobrescribir datos que aún no se han copiado.
 Toma tres argumentos: un puntero al destino, un puntero al origen y el número de bytes que se van a copiar */
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d; // Puntero de tipo unsigned char para el destino
 	unsigned char	*s; // Puntero de tipo unsigned char para el origen
 
-	if (!dst && !src)
-		return (dst); // En caso de que ambos punteros sean nulos, retorna el destino
-	d = (unsigned char *)dst;
+	if (!dest && !src)
+		return (dest); // En caso de que ambos punteros sean nulos, retorna el destino
+	d = (unsigned char *)dest;
 	s = (unsigned char *)src; // Convierte los punteros a unsigned char para que los datos se muevan byte a byte
 
 	if (s <= d) // Si el origen es menor o igual al destino, copia los datos de atrás hacia adelante
@@ -39,21 +39,21 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 			i++;
 		}
 	}
-	return (dst); // Devuelve el puntero dst una vez que se ha completado la copia de memoria
+	return (dest); // Devuelve el puntero dest una vez que se ha completado la copia de memoria
 }
 
 /* 
 Otra versión usando ft_memcpy(), que es más rápida para el caso de que no haya superposición:
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-  // Se definen dos punteros d y s como unsigned char, que apuntarán a la dirección de memoria de dst y src, respectivamente
+  // Se definen dos punteros d y s como unsigned char, que apuntarán a la dirección de memoria de dest y src, respectivamente
   unsigned char	*d;
   unsigned char	*s;
-  d = (unsigned char *)dst;
+  d = (unsigned char *)dest;
   s = (unsigned char *)src;
 
-	if (src == NULL && dst == NULL)
-		return (NULL); // Si src y dst son NULL, la función devuelve NULL
+	if (src == NULL && dest == NULL)
+		return (NULL); // Si src y dest son NULL, la función devuelve NULL
 
 	if (d >= s) // Si la dirección de memoria de d es mayor o igual que la de s, se copiarán los datos hacia atrás
 	{
@@ -62,6 +62,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	else // Si la dirección de memoria de d es menor que la de s, se copiarán los datos hacia adelante utilizando la función ft_memcpy
 		ft_memcpy(d, s, n);
-	return (dst); // Devuelve un puntero a dst
+	return (dest); // Devuelve un puntero a dest
 }
 */

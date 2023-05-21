@@ -20,44 +20,43 @@ Los parámetros son:
 
 Esta función es similar a ft_memmove(), pero no garantiza que los bloques de memoria se copien correctamente si se superponen. Si se necesitan garantías en caso de solapamiento, se debe usar ft_memmove() */
 
-void	*ft_memccpy(void *dst, const void *src, size_t n)
+void	*ft_memccpy(void *dest, const void *src, size_t n)
 {
-	// Se declaran los punteros char para dst y src, así como la variable i para llevar el control del número de bytes copiados
+	// Se declaran los punteros char para dest y src, así como la variable i para llevar el control del número de bytes copiados
 	char	*d;
 	char	*s;
 	size_t	i;
 
-	if (!dst && !src)
-		return (NULL); // Se verifica si dst y src son nulos
+	if (!dest && !src)
+		return (NULL); // Se verifica si dest y src son nulos
 
-	// Se convierten los punteros a dst y src a punteros char para poder copiar byte a byte
-	d = (const char *)dst;
+	// Se convierten los punteros a dest y src a punteros char para poder copiar byte a byte
+	d = (const char *)dest;
 	s = (char *)src;
 	i = 0; // Se inicializa la variable i en 0
 
-	// Se recorre el bloque de memoria de src copiando byte a byte en dst hasta llegar al final o hasta encontrar el carácter buscado
+	// Se recorre el bloque de memoria de src copiando byte a byte en dest hasta llegar al final o hasta encontrar el carácter buscado
 	while (i < n)
 	{
-		d[i] = s[i]; // Se copia un byte de src en dst
+		d[i] = s[i]; // Se copia un byte de src en dest
 		i++; // Se incrementa i
 	}
 
-	// Retorna el dst modificado
-	return (dst);
+	return (dest); // Retorna el dest modificado
 }
 
 /*
 Otra forma:
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 	unsigned char	x;
 	size_t			i;
 
-	if (src == NULL && dst == NULL)
+	if (src == NULL && dest == NULL)
 		return (NULL);
-	d = (unsigned char *)dst;
+	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	x = (unsigned char)c;
 	i = 0;

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/* Esta función busca la primera aparición de una subcadena "aguja" dentro de una cadena más grande "pajar" limitando la búsqueda a un número máximo de caracteres (len) */
+/* Esta función busca la primera aparición de una subcadena "aguja" (needle) dentro de una cadena más grande "pajar" (haystack) limitando la búsqueda a un número máximo de caracteres (len) */
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

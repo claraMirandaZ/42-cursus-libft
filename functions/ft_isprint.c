@@ -12,7 +12,8 @@
 
 #include "libft.h"
 
-/* Esta función comprueba si el parámetro corresponde a un carácter imprimible, incluyendo el espacio, devolviendo 1 si true y 0 si false */
+/* Esta función comprueba si el parámetro corresponde a un carácter imprimible.
+Los caracteres imprimibles son  los dígitos, letras, puntuación, espacios en blanco y otros caracteres visibles en la tabla ASCII. Los caracteres de control no se consideran imprimibles */
 
 int	ft_isprint(int c)
 {

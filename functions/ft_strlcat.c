@@ -11,42 +11,44 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /* Esta función se utiliza para concatenar dos cadenas de caracteres de forma segura, es decir, sin desbordar el búfer de destino */
 
-/* Función auxiliar para calcular la longitud de una cadena de caracteres
+/* 
+Función auxiliar para calcular la longitud de una cadena de caracteres
 size_t ft_strlen(const char *c) {
     size_t len = 0;
     while (c[len])
         len++;
     return len;
-} */
+} 
+*/
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize) {
+size_t ft_strlcat(char *dest, const char *src, size_t destsize) {
 
-  size_t i, srclen, dstlen; // Se pueden declarar por separado
+  size_t i, srclen, destlen; // Se pueden declarar por separado
 
   i = 0;
   srclen = ft_strlen(src); // Calcula la longitud de la cadena src
-  dstlen = ft_strlen(dst); // Calcula la longitud de la cadena dst
+  destlen = ft_strlen(dest); // Calcula la longitud de la cadena dest
 
   // Control de errores: si el numero de caracteres a copiar es cero
-  if (dstsize == 0) {
+  if (destsize == 0) {
     return (srclen); // Devuelve la longitud original
   }
-  if (dstsize < dstlen + 1) {
-    return (dstsize + srclen); // Si no hay suficiente espacio para concatenar las cadenas, devuelve el tamaño total que se necesitaría
+  if (destsize < destlen + 1) {
+    return (destsize + srclen); // Si no hay suficiente espacio para concatenar las cadenas, devuelve el tamaño total que se necesitaría
   }
-  while (src[i] && i < dstsize - dstlen - 1) { // Mientras haya caracteres en la cadena src y espacio suficiente para concatenar las cadenas,
-    dst[dstlen + i] = src[i]; // concatena los caracteres
+  while (src[i] && i < destsize - destlen - 1) { // Mientras haya caracteres en la cadena src y espacio suficiente para concatenar las cadenas,
+    dest[destlen + i] = src[i]; // concatena los caracteres
     i++;
   }
-  dst[dstlen + i] = '\0'; // Agrega el carácter nulo al final de la cadena concatenada
-  return (dstlen + srclen); // Y devuelve el tamaño total de la cadena concatenada
+  dest[destlen + i] = '\0'; // Agrega el carácter nulo al final de la cadena concatenada
+  return (destlen + srclen); // Y devuelve el tamaño total de la cadena concatenada
 }
 
 /*
+Ejemplo de main para compilar
 int main() {
   char str1[50] = "Hola, "; // Primera cadena a concatenar
   char str2[50] = "mundo!"; // Segunda cadena a concatenar
