@@ -16,88 +16,73 @@
 /* ft_split se utiliza para dividir una cadena en subcadenas más pequeñas basadas en un delimitador dado. Toma dos argumentos: la cadena a dividir (s) y el carácter delimitador (c) */
 
 /* Función auxiliar para contar el número de palabras en la cadena */
-static int	ft_count_words(char const *s, char c)
+int ft_count_words(char const *s, char c)
 {
-  // Declaramos e inicializamos variables
-	int count = 0; // Contador de palabras
-	int is_word = 0; // Flag para indicar si se está leyendo una palabra
+	int count;
+	int i;
 
-	while (*s)
+	count = 0;
+	i = 0;
+
+	while (s[i] != '\0') // Itera hasta llegar al final de la cadena s
 	{
-		if (*s != c && !is_word) // Si el carácter es diferente al carácter delimitador c y si la bandera is_word es falsa
+		if (s[i] != c) // Si el carácter actual no es igual al delimitador c
 		{
-			is_word = 1; // Se ha encontrado una nueva palabra
 			count++; // Incrementa el contador de palabras
-		}
-		else if (*s == c) // Si el carácter actual de la cadena s es igual al carácter delimitador c (fin de la palabra)
-		{
-			is_word = 0; // Se encontró el delimitador, se reinicia la flag de palabra
-		}
-		s++; // Avanza al siguiente carácter
-	}
-	return count;
-}
-
-/* Función auxiliar para copiar una palabra en una nueva cadena */
-static char	*ft_copy_word(const char *s, char c)
-{
-	int		i;
-	char	*word;
-
-	i = 0;
-	while (s[i] && s[i] != c) // Se ejecuta el bucle mientras no se llegue al carácter nulo \0 ni sea igual que c
-		i++;
-
-	word = (char *)malloc((i + 1) * sizeof(char)); // Reserva memoria para la palabra
-
-	if (!word) // Si la variable es nula no se puede asignar memoria
-		return NULL;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-	{
-		word[i] = s[i]; // Copia los caracteres de la palabra
-		i++;
-	}
-	word[i] = '\0'; // Agrega el carácter nulo al final de la palabra
-	return word;
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int		i;
-	int		word_count; // Número de palabras en la cadena
-	char	**result; // Array de cadenas para almacenar las palabras
-
-	if (!s)
-		return NULL; // Verifica si la cadena es nula
-
-	word_count = ft_count_words(s, c); // Cuenta el número de palabras
-	result = (char **)malloc((word_count + 1) * sizeof(char *)); // Reserva memoria para el array de cadenas
-
-	if (!result)
-		return NULL;
-
-	i = 0;
-	while (*s)
-	{
-		if (*s != c) // Se encuentra un carácter de palabra
-		{
-			result[i] = ft_copy_word(s, c); // Copia la palabra en una nueva subcadena
-			if (!result[i]) // Verifica si ocurrió un error al copiar la palabra
-			{
-				while (i > 0)
-					free(result[--i]); // Libera la memoria de las palabras ya copiadas
-				free(result); // Libera el array de cadenas
-				return NULL;
-			}
-			i++; // Incrementa el índice del array
-			while (*s && *s != c) // Mientras no se llegue al final de la cadena o encuentre el carácter c
-				s++; // Avanza hasta el siguiente carácter de delimitador o el final de la cadena
+			while (s[i] != c && s[i] != '\0') // Itera hasta encontrar el próximo delimitador o el final de la cadena
+				i++; // Incrementa el índice para pasar al siguiente carácter
 		}
 		else
-			s++; // Avanza al siguiente carácter, si es un delimitador
+		{
+			i++; // Si el carácter actual es igual al delimitador, pasa al siguiente carácter
+		}
 	}
-	result[i] = NULL; // Establece el último elemento del array como nulo para indicar el final
-	return result; // Devuelve el array de cadenas con las palabras
+	return count; // Devuelve el número total de palabras encontradas
+}
+
+/* Función auxiliar para obtener la siguiente palabra de la cadena */
+char	*ft_get_next_word(char const *s, char c, int *start)
+{
+	int end;
+
+	end = *start;
+	while (s[end] != c && s[end] != '\0') // Itera hasta encontrar el siguiente delimitador o el final de la cadena
+		end++; // Incrementa el índice para pasar al siguiente carácter
+
+	int word_len;
+	char *word;
+
+	word_len = end - *start; // Calcula la longitud de la palabra
+	word = (char *)malloc((word_len + 1) * sizeof(char)); // Asigna memoria para la palabra
+
+	for (int i = 0; i < word_len; i++) // Copia la palabra desde s a word
+		word[i] = s[*start + i]; // Obtiene el carácter correspondiente desde s
+
+	word[word_len] = '\0'; // Agrega el carácter nulo al final de la palabra
+	*start = end; // Actualiza el índice de inicio para la próxima palabra
+	return word; // Devuelve la palabra obtenida
+}
+
+char **ft_split(char const *s, char c)
+{
+	int num_words;
+	char **result;
+	int start;
+	int word_index;
+
+	num_words = ft_count_words(s, c); // Obtiene el número total de palabras en s
+	result = (char **)malloc((num_words + 1) * sizeof(char *)); // Asigna memoria para la matriz de palabras
+	start = 0; // Inicializa el índice de inicio
+	word_index = 0; // Inicializa el índice de palabras en la matriz
+
+	while (s[start] != '\0') // Itera hasta llegar al final de la cadena s
+	{
+		if (s[start] != c) // Si el carácter actual no es igual al delimitador c
+			result[word_index++] = ft_get_next_word(s, c, &start); // Obtiene la siguiente palabra y la guarda en la matriz de palabras
+		else
+			start++; // Si el carácter actual es igual al delimitador, pasa al siguiente carácter
+	}
+
+	result[word_index] = NULL; // Agrega un puntero nulo al final de la matriz de palabras
+	return result; // Devuelve la matriz de palabras obtenida
 }
