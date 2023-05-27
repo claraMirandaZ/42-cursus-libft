@@ -16,37 +16,6 @@
 
 int	ft_atoi(const char *str)
 {
-  int sign; // Variable para manejar el signo del número
-  int num; // Variable para almacenar el valor entero del número
-  int i; // Contador para iterar a través de la cadena
-  
-  sign = 1; // El signo predeterminado es positivo
-  num = 0; // Inicialmente, el valor del número es 0
-  i = 0; // Comienza a iterar desde el índice 0
-
-  while (str[i] == 32 || (str[i] > 8 && str[i] < 14)) // Se salta cualquier espacio en blanco o caracteres de control en la cadena
-      i++;
-
-  if (str[i] == 43 || str[i] == 45) // Si el primer carácter que encontramos es un signo, actualizamos el signo del número
-  {
-    if (str[i] == 45)
-        sign *= -1; // Si es un signo negativo, cambiamos el signo a negativo
-    i++;
-  }
-
-  while (str[i] > 47 && str[i] < 58) // Una vez controlados los signos, itera a través de la cadena y construye el número entero
-  {
-    num = (num * 10) + (str[i] - 48); // Agrega el dígito al número, multiplicando por 10 para mover los dígitos previos a la siguiente posición
-    i++; // Siguiente carácter de la cadena
-  }
-
-  return (num * sign); // Devuelve el número entero calculado, multiplicado por el signo correspondiente
-}
-
-/*
-Otra forma de enfocar esta función (añadiendo algunas comprobaciones para evitar posibles errores) es:
-int	ft_atoi(const char *str)
-{
 	long num; // Variable que almacenará el número final
 	int sign; // Variable que indica si el número es positivo o negativo
 
@@ -77,7 +46,6 @@ int	ft_atoi(const char *str)
 	}
 	return (num * sign); // Retorna el número multiplicado por el signo correspondiente
 }
-*/
 
 /*
 Otra forma de enfocar esta función es:
