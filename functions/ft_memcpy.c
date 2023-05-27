@@ -20,7 +20,7 @@ Los parámetros son:
 
 Esta función es similar a ft_memmove(), pero no garantiza que los bloques de memoria se copien correctamente si se superponen. Si se necesitan garantías en caso de solapamiento, se debe usar ft_memmove() */
 
-void	*ft_memccpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	// Se declaran los punteros char para dest y src, así como la variable i para llevar el control del número de bytes copiados
 	char	*d;
@@ -47,7 +47,7 @@ void	*ft_memccpy(void *dest, const void *src, size_t n)
 
 /*
 Otra forma:
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;

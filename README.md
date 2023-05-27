@@ -279,7 +279,7 @@ Prototipo `int	ft_strncmp(const char *str1, const char *str2, size_t n);`
 
 ### [ft_memchr](./functions/ft_memchr.c)
 
-Prototipo `void *memchr(const void *ptr, int value, size_t num);`
+Prototipo `void *ft_memchr(const void *ptr, int value, size_t num);`
 
 |                            Descripción                             |                                               Valor retornado                                               |
 | :----------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |

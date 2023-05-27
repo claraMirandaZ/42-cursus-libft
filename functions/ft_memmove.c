@@ -17,8 +17,9 @@ Toma tres argumentos: un puntero al destino, un puntero al origen y el número d
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d; // Puntero de tipo unsigned char para el destino
-	unsigned char	*s; // Puntero de tipo unsigned char para el origen
+	unsigned char *d; // Puntero de tipo unsigned char para el destino
+	unsigned char *s; // Puntero de tipo unsigned char para el origen
+	size_t i;
 
 	if (!dest && !src)
 		return (dest); // En caso de que ambos punteros sean nulos, retorna el destino
@@ -32,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else // Si el origen es mayor que el destino, copia los datos de adelante hacia atrás
 	{
-		size_t i = 0;
+		i = 0;
 		while (i < n)
 		{
 			d[i] = s[i];
