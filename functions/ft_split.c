@@ -16,73 +16,97 @@
 /* ft_split se utiliza para dividir una cadena en subcadenas más pequeñas basadas en un delimitador dado. Toma dos argumentos: la cadena a dividir (s) y el carácter delimitador (c) */
 
 /* Función auxiliar para contar el número de palabras en la cadena */
-int ft_count_words(char const *s, char c)
+static int ft_count_words(char *str, char c)
 {
-	int count;
-	int i;
+	int i; // Contador para recorrer el array de caracteres
+	int words; // Contador de palabras
 
-	count = 0;
 	i = 0;
+	words = 0;
 
-	while (s[i] != '\0') // Itera hasta llegar al final de la cadena s
+	while (str[i])
 	{
-		if (s[i] != c) // Si el carácter actual no es igual al delimitador c
-		{
-			count++; // Incrementa el contador de palabras
-			while (s[i] != c && s[i] != '\0') // Itera hasta encontrar el próximo delimitador o el final de la cadena
-				i++; // Incrementa el índice para pasar al siguiente carácter
-		}
-		else
-		{
-			i++; // Si el carácter actual es igual al delimitador, pasa al siguiente carácter
-		}
+		while (str[i] && str[i] == c) // Ignora los caracteres delimitadores al principio de cada palabra
+			i++;
+
+		if (str[i]) // Si aún hay caracteres en la cadena
+			words++; // Incrementa el contador de palabras
+
+		while (str[i] && str[i] != c) // Avanza hasta el siguiente delimitador o hasta el final de cadena
+			i++;
 	}
-	return count; // Devuelve el número total de palabras encontradas
+
+	return (words); // Devuelve el número de palabras encontradas
 }
 
-/* Función auxiliar para obtener la siguiente palabra de la cadena */
-char	*ft_get_next_word(char const *s, char c, int *start)
+/* Función para obtener la longitud de una palabra en el string, dada un delimitador específico */
+static int ft_get_word_length(char *str, char c)
 {
-	int end;
+	int i; // Contador para recorrer el array de caracteres
 
-	end = *start;
-	while (s[end] != c && s[end] != '\0') // Itera hasta encontrar el siguiente delimitador o el final de la cadena
-		end++; // Incrementa el índice para pasar al siguiente carácter
+	i = 0;
 
-	int word_len;
-	char *word;
+	while (str[i] && str[i] != c) // Avanza hasta el siguiente delimitador o el final de cadena
+		i++;
 
-	word_len = end - *start; // Calcula la longitud de la palabra
-	word = (char *)malloc((word_len + 1) * sizeof(char)); // Asigna memoria para la palabra
+	return (i); // Devuelve la longitud de la palabra
+}
 
-	for (int i = 0; i < word_len; i++) // Copia la palabra desde s a word
-		word[i] = s[*start + i]; // Obtiene el carácter correspondiente desde s
+/* Función para escribir una palabra a partir de la subcadena de caracteres */
+static char *ft_write_word(char *str, char c)
+{
+	int word_len; // Longitud de la palabra
+	int i; // Contador para recorrer el array de caracteres
+	char *word; // Puntero para almacenar la palabra
 
-	word[word_len] = '\0'; // Agrega el carácter nulo al final de la palabra
-	*start = end; // Actualiza el índice de inicio para la próxima palabra
-	return word; // Devuelve la palabra obtenida
+	i = 0;
+	word_len = ft_get_word_length(str, c); // Obtiene la longitud de la palabra
+	word = (char *)malloc(sizeof(char) * (word_len + 1)); // Asigna memoria para esa palabra
+	if (!word)
+		return (NULL);
+
+	while (i < word_len)
+	{
+		word[i] = str[i]; // Copia sus caracteres
+		i++;
+	}
+
+	word[i] = 0; // Agrega el carácter nulo al final de la palabra
+
+	return (word); // Devuelve la palabra creada
 }
 
 char **ft_split(char const *s, char c)
 {
-	int num_words;
-	char **result;
-	int start;
-	int word_index;
+	char *str; // Puntero para almacenar la cadena de caracteres convertida a tipo char *
+	char **strings; // Array de punteros para almacenar las palabras
+	int i; // Contador para recorrer ese array
 
-	num_words = ft_count_words(s, c); // Obtiene el número total de palabras en s
-	result = (char **)malloc((num_words + 1) * sizeof(char *)); // Asigna memoria para la matriz de palabras
-	start = 0; // Inicializa el índice de inicio
-	word_index = 0; // Inicializa el índice de palabras en la matriz
+	if (!s) // Comprobación de la validez de la palabra
+		return (NULL);
 
-	while (s[start] != '\0') // Itera hasta llegar al final de la cadena s
+	str = (char *)s; // Convierte la cadena constante en una cadena modificable
+	i = 0;
+	strings = (char **)malloc(sizeof(char *) * (ft_count_words(str, c) + 1)); // Asigna memoria para el array de palabras
+	if (!strings) // Validación de la asignación de memoria. Si malloc ha fallado,
+		return (NULL); // devuelve NULL
+
+	while (*str)
 	{
-		if (s[start] != c) // Si el carácter actual no es igual al delimitador c
-			result[word_index++] = ft_get_next_word(s, c, &start); // Obtiene la siguiente palabra y la guarda en la matriz de palabras
-		else
-			start++; // Si el carácter actual es igual al delimitador, pasa al siguiente carácter
+		while (*str && *str == c) // Ignora los caracteres delimitadores al principio de cada palabra
+			str++; // Avanza hasta el siguiente carácter que no sea el delimitador
+
+		if (*str) // Si aún quedan caracteres en la cadena,
+		{
+			strings[i] = ft_write_word(str, c); // llama a la función auxiliar para escribir la siguiente palabra en el array
+			i++;
+		}
+
+		while (*str && *str != c) // Mientras str no sea nulo ni sea el carácter delimitador,
+			str++; // avanza hasta el siguiente delimitador o hasta el final de cadena
 	}
 
-	result[word_index] = NULL; // Agrega un puntero nulo al final de la matriz de palabras
-	return result; // Devuelve la matriz de palabras obtenida
+	strings[i] = 0; // Agrega un puntero nulo al final del array de palabras para finalizarlo
+
+	return (strings); // Devuelve el array
 }
