@@ -13,100 +13,146 @@
 #include "libft.h"
 #include <stdlib.h>
 
-/* ft_split se utiliza para dividir una cadena en subcadenas más pequeñas basadas en un delimitador dado. Toma dos argumentos: la cadena a dividir (s) y el carácter delimitador (c) */
+/* ft_split divide una cadena de texto en palabras utilizando un delimitador dado y devuelve un array de cadenas de caracteres (palabras) como resultado. Toma dos argumentos: la cadena a dividir (s) y el carácter delimitador (c) */
 
-/* Función auxiliar para contar el número de palabras en la cadena */
-static int ft_count_words(char *str, char c)
+/* Función auxiliar para contar el número total de palabras en una cadena de caracteres (str) utilizando un delimitador específico (c). La función recorre la cadena carácter por carácter y mantiene un contador totalWordNbr para rastrear el número de palabras encontradas */
+static int	ft_count_words(const char *str, char c)
 {
-	int i; // Contador para recorrer el array de caracteres
-	int words; // Contador de palabras
+    int	i; // Contador para recorrer el string
+    int	totalWordNbr; // Variable para almacenar el número total de palabras en el string
+    int	flag; // Bandera booleana que indica si el programa se encuentra dentro o fuera de una palabra, mientras recorre la cadena
 
-	i = 0;
-	words = 0;
+    i = 0;
+    totalWordNbr = 0;
+    flag = 0;
 
-	while (str[i])
-	{
-		while (str[i] && str[i] == c) // Ignora los caracteres delimitadores al principio de cada palabra
-			i++;
-
-		if (str[i]) // Si aún hay caracteres en la cadena
-			words++; // Incrementa el contador de palabras
-
-		while (str[i] && str[i] != c) // Avanza hasta el siguiente delimitador o hasta el final de cadena
-			i++;
-	}
-
-	return (words); // Devuelve el número de palabras encontradas
+    while (str[i] != '\0') // Recorre la cadena hasta el final
+    {
+        if (str[i] != c && flag == 0) // Verifica si el carácter actual no es el delimitador y si no está dentro de una palabra
+        {
+            // Indica que está dentro de una palabra y aumenta el contador de palabras
+            flag = 1;
+            totalWordNbr++;
+        }
+        else if (str[i] == c) // Verifica si el carácter actual es el delimitador
+        {
+            flag = 0; // Indica que no está dentro de una palabra
+        }
+        i++;
+    }
+    return (totalWordNbr); // Devuelve el total de palabras encontradas
 }
 
-/* Función para obtener la longitud de una palabra en el string, dada un delimitador específico */
-static int ft_get_word_length(char *str, char c)
+/* Función auxiliar para liberar la memoria asignada dinámicamente para un array de cadenas. Itera sobre las cadenas individuales en matrix y las libera una por una utilizando la función free(). Luego, libera la memoria asignada para el array completo */
+static char	**ft_free_memory(char **matrix)
 {
-	int i; // Contador para recorrer el array de caracteres
+    size_t	i;
 
-	i = 0;
+    i = 0;
 
-	while (str[i] && str[i] != c) // Avanza hasta el siguiente delimitador o el final de cadena
-		i++;
+    // Itera sobre la matriz (array de cadenas) hasta encontrar un elemento nulo
+    while (matrix[i])
+    {
+        free(matrix[i]); // Libera la memoria asignada para cada cadena individual
+        i++;
+    }
 
-	return (i); // Devuelve la longitud de la palabra
+    free(matrix); // Libera la memoria asignada para la matriz en sí
+
+    return (NULL); // Devuelve un puntero nulo para indicar que la memoria ha sido liberada correctamente
 }
 
-/* Función para escribir una palabra a partir de la subcadena de caracteres */
-static char *ft_write_word(char *str, char c)
-{
-	int word_len; // Longitud de la palabra
-	int i; // Contador para recorrer el array de caracteres
-	char *word; // Puntero para almacenar la palabra
+/* Función auxiliar para asignar memoria dinámicamente y reservar un bloque de memoria contigua de tamaño num * size, y luego inicializarlo con ceros. Está en esta misma Libft.
 
-	i = 0;
-	word_len = ft_get_word_length(str, c); // Obtiene la longitud de la palabra
-	word = (char *)malloc(sizeof(char) * (word_len + 1)); // Asigna memoria para esa palabra
-	if (!word)
+void	*ft_calloc(size_t num, size_t size)
+{
+	void	*result;
+
+	result = malloc(num * size);
+
+	if (!result)
 		return (NULL);
-
-	while (i < word_len)
+	else
 	{
-		word[i] = str[i]; // Copia sus caracteres
-		i++;
+		ft_bzero(result, (num * size));
+		return (result);
 	}
+} */
 
-	word[i] = 0; // Agrega el carácter nulo al final de la palabra
+/* Función auxiliar para extraer una subcadena de una cadena dada (s), desde un índice dado (start) y con una longitud determinada (len). Está en esta misma Libft.
 
-	return (word); // Devuelve la palabra creada
-}
-
-char **ft_split(char const *s, char c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str; // Puntero para almacenar la cadena de caracteres convertida a tipo char *
-	char **strings; // Array de punteros para almacenar las palabras
-	int i; // Contador para recorrer ese array
+	char	*ptr;
+	size_t	i;
 
-	if (!s) // Comprobación de la validez de la palabra
-		return (NULL);
-
-	str = (char *)s; // Convierte la cadena constante en una cadena modificable
-	i = 0;
-	strings = (char **)malloc(sizeof(char *) * (ft_count_words(str, c) + 1)); // Asigna memoria para el array de palabras
-	if (!strings) // Validación de la asignación de memoria. Si malloc ha fallado,
-		return (NULL); // devuelve NULL
-
-	while (*str)
-	{
-		while (*str && *str == c) // Ignora los caracteres delimitadores al principio de cada palabra
-			str++; // Avanza hasta el siguiente carácter que no sea el delimitador
-
-		if (*str) // Si aún quedan caracteres en la cadena,
-		{
-			strings[i] = ft_write_word(str, c); // llama a la función auxiliar para escribir la siguiente palabra en el array
-			i++;
-		}
-
-		while (*str && *str != c) // Mientras str no sea nulo ni sea el carácter delimitador,
-			str++; // avanza hasta el siguiente delimitador o hasta el final de cadena
+	if (!s) {
+		return (0);
 	}
 
-	strings[i] = 0; // Agrega un puntero nulo al final del array de palabras para finalizarlo
+	if ((unsigned int)ft_strlen(s) < start) {
+		return (ft_strdup(""));
+	}
 
-	return (strings); // Devuelve el array
+	i = ft_strlen(s + start);
+
+	if (i < len) {
+		len = i;
+	}
+
+	ptr = malloc(sizeof(char) * (len + 1));
+
+	if (!ptr) {
+		return (0);
+	}
+
+	ft_strlcpy(ptr, s + start, len + 1);
+
+	return (ptr);
+} */
+
+char	**ft_split(const char *s, char c)
+{
+	char	**words; // Puntero a un puntero de caracteres para contener las palabras como strings
+	size_t	i; // Índice para la posición en la cadena de entrada (y almacenar la longitud de la palabra)
+	int	j; // Contador para la posición en el array de palabras
+	int	totalWords; // Almacena el número total de palabras en la cadena de entrada
+
+	totalWords = ft_count_words(s, c); // Cuenta el número total de palabras en la cadena
+
+	words = ft_calloc(totalWords + 1, sizeof(char *)); // Asigna memoria para el array de palabras
+	
+	// Control de errores. Verifica si la asignación de memoria ha ido bien, o si la cadena de entrada es nula
+	if (!words || !s)
+		return (0);
+		/* Si se cumple alguna de estas condiciones, la función se detiene y retorna un puntero nulo para indicar un error */
+	
+	i = 0;
+	j = 0;
+	
+	// Itera hasta que se hayan registrado todas las palabras
+	while (j < totalWords)
+	{
+		i = 0;
+		
+		// Omite los caracteres delimitadores al comienzo de la cadena
+		while (*s == c)
+			s++;
+			/* Este bucle avanza el puntero (s) más allá de los caracteres delimitadores al comienzo de la cadena de entrada. Esto es necesario para asegurarse de que el proceso de extracción de palabras comience desde el primer carácter no delimitador */
+		
+		// Cuenta la longitud de la palabra actual
+		while (s[i] != c && s[i])
+			i++;
+		
+		words[j] = ft_substr(s, 0, i); // Extrae la palabra actual con ft_substr y la asigna a la posición j del array de palabras words
+		
+		s = s + i; // Avanza el puntero de la cadena a la siguiente palabra
+		
+		// Verifica si la extracción de la palabra ha tenido éxito
+		if (words[j++] == 0)
+			return (ft_free_memory(words));
+			/* En caso de que no se haya podido extraer la palabra correctamente, se llama a la función ft_free_memory para liberar la memoria asignada al array words y luego se devuelve un puntero nulo para indicar un error */
+	}
+	
+	return (words); // Devuelve el array de palabras resultante
 }
