@@ -31,7 +31,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (NULL); // Se verifica si dest y src son nulos
 
 	// Se convierten los punteros a dest y src a punteros char para poder copiar byte a byte
-	d = (const char *)dest;
+	d = (char *)dest;
 	s = (char *)src;
 	i = 0; // Se inicializa la variable i en 0
 
