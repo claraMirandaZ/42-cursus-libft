@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/* Esta función compara los primeros n bytes de los bloques de memoria apuntados por los punteros str1 y str2 y devuelve un valor entero que indica la relación entre los bloques de memoria */
+/* Esta función compara los primeros n bytes de los bloques de memoria apuntados por los punteros str1 y str2 y devuelve un valor entero que indica la relación entre ellos */
 
 int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {

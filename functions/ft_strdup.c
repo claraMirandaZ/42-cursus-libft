@@ -17,13 +17,13 @@ La memoria para la cadena duplicada se asigna dinámicamente utilizando malloc, 
 
 char *ft_strdup(const char *str)
 {
-  char *ptr;
+  char *ptr; // Declara una variable ptr que es un puntero a un carácter (char)
   int i;
 
   i = 0;
   ptr = NULL;
   ptr = malloc (ft_strlen(str) * sizeof(char) + 1); // Asigna memoria para la cadena duplicada
-  if (!ptr) // Si el puntero es nulo, la asignación falló
+  if (!ptr) // Si el puntero es nulo, la asignación ha fallado
       return (0); // y devuelve un puntero nulo
   while (str[i] != '\0') // Mientras el carácter en la posición i de la cadena no sea el carácter nulo de terminación
   {

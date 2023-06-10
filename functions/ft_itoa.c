@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Esta función hace lo contrario a ft_atoi; convierte un número entero en una cadena de caracteres y devuelve un puntero a esa cadena */
+
+/* La función auxiliar ft_size calcula el tamaño necesario para almacenar la cadena de caracteres que representa el número entero nb */
 int	ft_size(int nb)
 {
 	int	i;
@@ -19,11 +22,13 @@ int	ft_size(int nb)
 	i = 0;
 	if (nb == -2147483648) // Comprueba el caso especial cuando nb es igual al mínimo número posible
 		return (i + 11); // Devuelve el número de dígitos
-	// Comprueba el caso cuando nb es igual a 0 y devuelve el tamaño correspondiente
-	if (nb == 0) // Caso especial si nb es cero,
+	
+	// Comprueba el caso especial cuando nb es igual a 0 y devuelve el tamaño correspondiente
+	if (nb == 0) // Si nb es cero,
 		return (i + 1); // devuelve 1
 	if (nb < 0) // Si nb es negativo,
 		i++; // añadimos 1 para contabilizar el signo negativo
+
 	while (nb) // Mientras nb sea diferente de cero
 	{
 		nb /= 10; // Divide nb por 10 en cada iteración, eliminando el dígito menos significativo 
@@ -32,12 +37,13 @@ int	ft_size(int nb)
 	return (i); // Devolvemos el número de dígitos que tiene el número
 }
 
+/* La función auxiliar ft_putnbr se encarga de asignar los dígitos de nb a la cadena ptr  */
 void	ft_putnbr(char *ptr, int nb, int size)
 {
 	int	limit;
 
-	limit = 0;
-	ptr[size] = '\0';
+	limit = 0; // Inicializa limit en 0
+	ptr[size] = '\0'; // Y establece el carácter nulo '\0' al final de la cadena.
 	
 	if (nb == -2147483648) // Si nb es el caso especial de ser igual a -2147483648
 	{
@@ -66,10 +72,10 @@ char	*ft_itoa(int nb)
 
 	size = ft_size(nb); // Guardamos en size lo que nos ha dado ft_size
 	ptr = NULL; // Inicializamos el puntero
-	ptr = malloc((size + 1) * sizeof(char)); // Reserva memoria para la cadena, (incluyendo espacio para el carácter nulo, por eso size + 1)
+	ptr = malloc((size + 1) * sizeof(char)); // Reserva memoria para la cadena, incluyendo espacio para el carácter nulo (por eso size + 1)
 
 	if (!ptr)
-		return (0);
+		return (0); // Si la asignación de memoria falla, se devuelve un puntero nulo
 
 	ft_putnbr(ptr, nb, size); // Convierte nb a una cadena de caracteres y la guarda en ptr
 	return (ptr); // Devuelve la cadena resultante

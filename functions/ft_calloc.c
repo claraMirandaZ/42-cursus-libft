@@ -20,9 +20,10 @@ void	*ft_calloc(size_t num, size_t size)
 	void	*result;
 
 	result = malloc(num * size); // Reserva memoria contigua de tamaño num * size
-  // El resultado se almacena en la variable result
-	if (!result) // Verifica si se asignó la memoria correctamente
-		return (NULL); // Si result es igual a NULL, significa que la función malloc no pudo reservar suficiente memoria
+  	// El resultado se almacena en la variable result
+
+	if (!result) // Verifica si la memoria se ha asignado correctamente,
+		return (NULL); // si result es igual a NULL, significa que la función malloc no pudo reservar suficiente memoria
 	else
 	{
 		ft_bzero(result, (num * size)); // Inicializa el bloque de memoria reservado con ceros usando bt_bzero

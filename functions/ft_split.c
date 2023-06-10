@@ -63,7 +63,6 @@ static char	**ft_free_memory(char **matrix)
 }
 
 /* Función auxiliar para asignar memoria dinámicamente y reservar un bloque de memoria contigua de tamaño num * size, y luego inicializarlo con ceros. Está en esta misma Libft.
-
 void	*ft_calloc(size_t num, size_t size)
 {
 	void	*result;
@@ -80,7 +79,6 @@ void	*ft_calloc(size_t num, size_t size)
 } */
 
 /* Función auxiliar para extraer una subcadena de una cadena dada (s), desde un índice dado (start) y con una longitud determinada (len). Está en esta misma Libft.
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;

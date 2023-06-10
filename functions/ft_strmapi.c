@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* El propósito de esta función es aplicar la función f a cada carácter de la cadena s, pasando como argumentos la posición del carácter en la cadena y el propio carácter, y almacenar los resultados en una nueva cadena de caracteres */
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i; // Declara un entero

@@ -24,7 +24,7 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 
-	// Recorre la cadena de caracteres hasta llegar al final (carácter nulo '\0') o si el descriptor de archivo es inválido
+	// Recorre la cadena de caracteres hasta llegar al final (carácter nulo '\0'), siempre que el descriptor no sea negativo
 	while (s[i] && fd >= 0)
 	{
 		// Llama a la función ft_putchar_fd para escribir el carácter actual en el descriptor de archivo.

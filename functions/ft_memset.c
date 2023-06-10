@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-/* La función ft_memset llena un bloque de memoria con un valor específico. Toma tres argumentos: un puntero al bloque de memoria que será rellenado, un valor a poner y un número de bytes asociados al valor. Devuelve un puntero al bloque de memoria que se ha llenado */
+/* La función ft_memset llena un bloque de memoria con un valor específico. Toma tres argumentos: un puntero al bloque de memoria que será rellenado, un valor a poner y un número de bytes asociados al valor. Devuelve un puntero al bloque de memoria que se ha llenado.
+Los parámetros son:
+- Puntero vacío p que representa el bloque de memoria a ser llenado.
+- Variable c que es el valor a poner.
+- Variable de tipo size_t que representa el número de bytes a poner en c. */
 
 void	*ft_memset(void *p, int c, size_t len)
-// Los parámetros son:
-// Puntero vacío p que representa el bloque de memoria a ser llenado
-// Variable c que es el valor a poner
-// Variable de tipo size_t que representa el número de bytes a poner en c
 {
 	unsigned char *ptr; // Puntero que apunta al bloque de memoria
 	unsigned char a; // Variable que guardará el valor del carácter que se usará para llenar los bloques de memoria apuntados por ptr
